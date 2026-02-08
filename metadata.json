@@ -1,0 +1,7 @@
+{
+  "name": "Map Maker AI",
+  "description": "An artistic map generation application that transforms any city in the world into a cartographic masterpiece, from RPG styles to Cyberpunk.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
