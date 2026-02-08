@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { MAP_STYLES } from './constants';
 import { MapStyle, GeneratedMap } from './types';
@@ -195,7 +194,7 @@ const App: React.FC = () => {
                 className="w-full h-full absolute transition-transform duration-75 ease-out will-change-transform"
                 style={{ transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`, transformOrigin: 'center' }}
               >
-                <img src={currentMap.imageUrl} className="w-full h-full object-contain bg-white pointer-events-none select-none" />
+                <img src={currentMap.imageUrl} className="w-full h-full object-contain bg-white pointer-events-none select-none" alt={currentMap.cityName} />
               </div>
               
               <div className="absolute top-4 right-4 flex flex-col gap-2 z-50">
@@ -220,7 +219,7 @@ const App: React.FC = () => {
 
                   <div className="pt-3 border-t border-slate-100">
                     <p className="text-[10px] text-slate-500 font-medium leading-relaxed italic">
-                      Note : Ces cartes sont générées par IA et s'inspirent de la topologie réelle des villes. Bien qu'elles visent la précision, elles restent des interprétations artistiques et peuvent ne pas être fidèles à 100 % à la réalité du terrain.
+                      Note: These maps are AI-generated and inspired by real city topology. While they aim for accuracy, they remain artistic interpretations and may not be 100% faithful to the real-world terrain.
                     </p>
                   </div>
                 </div>
@@ -233,7 +232,7 @@ const App: React.FC = () => {
                     <div className="flex gap-1.5 p-1.5 bg-white/60 backdrop-blur-sm rounded-lg border border-white/50 pointer-events-auto overflow-x-auto max-w-[200px] no-scrollbar">
                       {history.slice(1, 6).map((h, i) => (
                         <button key={i} onClick={() => { setCurrentMap(h); resetView(); }} className="w-8 h-8 rounded-md overflow-hidden border border-slate-300 shrink-0 hover:scale-110 transition-transform">
-                          <img src={h.imageUrl} className="w-full h-full object-cover" />
+                          <img src={h.imageUrl} className="w-full h-full object-cover" alt={h.cityName} />
                         </button>
                       ))}
                     </div>
