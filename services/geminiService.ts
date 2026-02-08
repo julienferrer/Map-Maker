@@ -1,6 +1,6 @@
 
 import { GoogleGenAI } from "@google/genai";
-import { MapStyle } from '../types';
+import { MapStyle } from '../types.ts';
 
 /**
  * Generates a city map image using gemini-2.5-flash-image.

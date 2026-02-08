@@ -1,8 +1,9 @@
+
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { MAP_STYLES } from './constants';
-import { MapStyle, GeneratedMap } from './types';
-import { generateCityMap } from './services/geminiService';
-import StylePicker from './components/StylePicker';
+import { MAP_STYLES } from './constants.ts';
+import { MapStyle, GeneratedMap } from './types.ts';
+import { generateCityMap } from './services/geminiService.ts';
+import StylePicker from './components/StylePicker.tsx';
 
 const App: React.FC = () => {
   const [city, setCity] = useState('');

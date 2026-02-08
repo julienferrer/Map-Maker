@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { MAP_STYLES } from '../constants';
-import { StyleCategory, MapStyle } from '../types';
+import { MAP_STYLES } from '../constants.ts';
+import { StyleCategory, MapStyle } from '../types.ts';
 
 interface StylePickerProps {
   selectedStyle: MapStyle;
