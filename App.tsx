@@ -63,7 +63,8 @@ const App: React.FC = () => {
       setCurrentMap(newMap);
       setHistory(prev => [newMap, ...prev.slice(0, 9)]);
     } catch (err: any) {
-      setError(err.message || "Connection error. Please ensure API_KEY is set in Vercel.");
+      setError("The generation service is currently busy or unavailable. Please try again in a few moments.");
+      console.error(err);
     } finally {
       setLoading(false);
     }
@@ -138,7 +139,7 @@ const App: React.FC = () => {
           <div className="flex flex-1 md:max-w-md gap-1.5">
             <input
               type="text"
-              placeholder="Search city..."
+              placeholder="Enter a city name..."
               value={city}
               onChange={(e) => setCity(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleGenerate()}

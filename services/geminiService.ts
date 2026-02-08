@@ -6,7 +6,7 @@ import { MapStyle } from '../types.ts';
  * Generates a city map image using gemini-2.5-flash-image.
  */
 export const generateCityMap = async (city: string, style: MapStyle): Promise<{ imageUrl: string }> => {
-  // Use the default API key provided in the environment.
+  // Use the pre-configured API key from the environment variable.
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   
   const prompt = `Generate a high-resolution artistic metropolitan road map of the city of ${city}. 
