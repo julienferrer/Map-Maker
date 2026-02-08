@@ -63,7 +63,7 @@ const App: React.FC = () => {
       setCurrentMap(newMap);
       setHistory(prev => [newMap, ...prev.slice(0, 9)]);
     } catch (err: any) {
-      setError(err.message || "An error occurred during generation.");
+      setError(err.message || "Connection error. Please ensure API_KEY is set in Vercel.");
     } finally {
       setLoading(false);
     }
